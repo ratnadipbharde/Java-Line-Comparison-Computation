@@ -8,19 +8,26 @@ public class Main {
     public static void main(String[] args) {
         Main obj = new Main();
         obj.displayMessage();
-       // System.out.println("Length of Line is : " + obj.getLength());//for calculate length
+        System.out.println("Length of Line is : " + obj.getLength());//for calculate length
         System.out.println("-------------------------------------------");
         Main obj1 = new Main();
         System.out.println("Enter values for First Line ");
-        String firstLength = String.valueOf(obj.getLength());
+        String firstLength = String.valueOf((int) obj.getLength());
         System.out.println();
         System.out.println("Enter values for Second Line ");
-        String secondLength = String.valueOf(obj1.getLength());
+        String secondLength = String.valueOf((int) obj1.getLength());
         if (firstLength.equals(secondLength)) {
             System.out.println("Lines are equal");
         } else {
             System.out.println("Lines are not equal");
         }
+        System.out.println("-------------------------------------------");
+        float result = firstLength.compareTo(secondLength);
+        if (result > 0)
+            System.out.println("First line is greater");
+        else if (result < 0)
+            System.out.println("Second line is greater");
+        else System.out.println("Lines are equal");
     }
 
     private double getLength() {
